@@ -10,7 +10,7 @@ When('the user adds a new todo item', ()=>{
         method: 'POST', 
         url: 'http://localhost:8080/todo/add/', 
         body: {
-            newtodo: 'write api tests'
+            newtodo: 'Write api tests'
         }
       })
 })
@@ -31,5 +31,5 @@ When('the delete request is executed to remove the first todo item', ()=>{
 })
 
 Then('the added item should be removed from the todo list', ()=>{
-    
+
 })
