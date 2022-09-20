@@ -13,6 +13,10 @@ When('the user adds a new todo item', ()=>{
             newtodo: 'Write api tests'
         }
       })
+    .then( ({ status }) => {
+        expect(status).to.eq(200)
+      })
+      
 })
 
 Then('the new item should be added to the todo list', ()=>{
@@ -26,7 +30,7 @@ Given('the user sends a request to access the todo list {string}', (url)=>{
 })
 
 When('the delete request is executed to remove the first todo item', ()=>{
-    cy.request('DELETE', '/todo/delete/0')
+    cy.request('GET', '/todo/delete/0')
 
 })
 
